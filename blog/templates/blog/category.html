@@ -1,0 +1,28 @@
+{% extends "component/main.html" %}
+{% block title %}
+    {{ halaman }}
+{% endblock %}
+
+
+    {% block judul %}
+<h1>Menu</h1>
+<nav>
+    <ul class="flex ">
+        {% for menu in categories %}
+            <li class="p-2"><a href="/blog/category/{{menu.category}}">{{ menu.category }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gaps">
+        {% for post in posts %}
+       <div class="relative w-96 h-60 sm:w-60 md:w-80 bg-gray-100 mt-4 rounded-xl m-4 " id="">
+            <div class="w-full h-16 rounded-md text-2xl font-arial text-xl border border-b-2 text-center">
+<!--                <p class="mt-2">{{ post.title }}</p>-->
+                <a href="/blog/post/{{post.slug}}">{{post.title}}</a>
+            </div>
+<!--                <p class="p-2">{{post.body}}</p>-->
+           <p class="text-gray-600 text-md p-4">{{post.email}}</p>
+            </div>
+        {%endfor%}
+    </div>
+    {% endblock judul %}

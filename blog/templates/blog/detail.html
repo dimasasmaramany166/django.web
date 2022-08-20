@@ -1,0 +1,12 @@
+
+
+{% extends "component/main.html" %}
+{% block title %}
+    {{ halaman }}
+{% endblock %}
+
+{% block judul %}
+    <h1>{{ posts.title }}</h1>
+    <h3>{{ posts.slug }}</h3>
+    <p>{{ posts.body }}</p>
+{% endblock %}

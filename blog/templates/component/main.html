@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>
+        {% block title %}
+
+        {% endblock title %}
+    </title>
+</head>
+<body>
+    {% block menu %}
+<!--    {% include "menu.html" %}-->
+<!--        {% include "menu.html" %} menu ini digunakan pada halman templates/menu.html (bukan pada folder blog) -->
+<!--        {% include "component/menu.html" %} menu ini digunakan padahalaman blog/templates/component/menu.html
+ di dalaman file blog-->
+    {% endblock menu %}
+
+    {% block card %}
+<!--            {% include "component/card.html" %}-->
+    {% endblock card %}
+
+<!--  card  -->
+    {% block judul %}
+
+     {% endblock judul %}
+<!-- endCard -->
+</body>
+</html>
